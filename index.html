@@ -6,14 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Counter</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <main>
-    <h2 class="heading">Word counter</h2>
-    <p class="para">Enter some text below:</p>
-    <input type="text" class="textfield">
+    <h1 class="heading">Word counter</h1>
+    <div class="counter">
+      <p class="para">Enter some text below:</p>
+      <textarea name="text" id="" cols="30" rows="10" class="textfield" onchange="fun()"></textarea>
+      <p class="res">You've written <b><span class="word">0</span> words</b> and <b><span class="character">0</span>
+          characters</b>
+      </p>
+    </div>
   </main>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
