@@ -2,16 +2,19 @@ const input = document.querySelector('.textfield');
 const word = document.querySelector('.word');
 const letter = document.querySelector('.character');
 
-var inputVal;
-
-// input.addEventListener('change', (e) => {
-//   inputVal = e.target.value;
-//   letter.innerText = inputVal.length;
-// });
-
 function fun() {
-  input.addEventListener('change', (e) => {
-    inputVal = e.target.value;
-    letter.innerText = inputVal.length;
-  });
+  var wordCount = 0, letterCount = 0;
+
+  letterCount = input.value;
+  letter.textContent = letterCount.length;
+
+  var split = letterCount.split(" ");
+
+  for(var i=0; i<split.length; i++) {
+    if (split[i] !== "") {
+      wordCount += 1;
+    }
+  }
+
+  word.textContent = wordCount;
 }
